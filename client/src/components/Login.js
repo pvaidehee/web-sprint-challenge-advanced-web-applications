@@ -12,8 +12,8 @@ import '../styles/login.scss'
 function Login(props) {
 
   const initialValue = {
-    email: 'somename',
-    password: 'password',
+    username: '',
+    password: '',
   }
 
 
@@ -43,11 +43,11 @@ function Login(props) {
                 <Form.Group controlId='formBasicEmail'>
                   <Form.Label>Email address</Form.Label>
                   <Form.Control
-                    type='name'
-                    value={value.name}
+                    type='text'
+                    value={value.username}
                     placeholder='Enter name'
                     onChange={handleChanges}
-                    name='name'
+                    name='username'
                   />
                   <Form.Text className='text-muted'>
                     We'll never share your email with anyone else.
