@@ -17,8 +17,19 @@
   },
   "homepage": "hhttps://github.com/LambdaSchool/SPA-Routing-React#readme",
   "dependencies": {
+    "axios": "^0.20.0",
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.2",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "ng2-bootstrap3-grid": "0.0.10",
+    "react-bootstrap": "^1.3.0",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "vstrap": "^1.2.0"
   }
 }
