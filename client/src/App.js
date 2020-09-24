@@ -1,26 +1,10 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import PrivateRoute from './routes/PrivateRoute';
-import Login from "./components/Login";
-import Bubbles from './components/BubblePage'
-import Colors from './components/Colors'
-import Navigation from './components/Nav'
-import AddColor from './components/AddColor'
+import axios from 'axios'
 
-function App() {
-  return (
-    <>
-      <Navigation />
+export const apiAuth = () => {
+  const token = localStorage.getItem('token')
 
-      <Switch>
-        <PrivateRoute path='/colors' component={Colors} />
-        <PrivateRoute path='/addcolor' component={AddColor} />
-        <PrivateRoute path='/bubbles' component={Bubbles} />
-
-        <Route exact path='/' component={Login} />
-      </Switch>
-    </>
-  );
+  return axios.create({
+    baseURL: 'http://localhost:5000/api',
+    headers: {Authorization: token},
+  })
 }
-
-export default App;
